@@ -910,7 +910,7 @@ font-weight: var(--fw-b);
   height: auto;
   aspect-ratio: 16 / 9;
 }
-/* Botones del editor: el aspecto de .btn-brand; "Contorno" sin relleno */
+/* Botones del editor: la cinta amarilla de .btn-brand; "Contorno" con la cinta blanca */
 .cuerpo .wp-block-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -918,24 +918,26 @@ font-weight: var(--fw-b);
 }
 .cuerpo .wp-block-button__link {
   display: inline-block;
-  padding: var(--xxs) var(--sm);
+  padding: var(--xxs) calc(var(--sm) * 1.2);
   font-family: var(--font-title);
   font-size: var(--md);
+  font-weight: var(--fw-b);
   line-height: 1.2;
   text-decoration: none;
   text-transform: uppercase;
-  color: var(--text-main);
-  background: var(--brand);
-  border: 2px solid var(--brand);
-  transition: color var(--transition), background-color var(--transition);
+  color: var(--bg-main);
+  background: url("boton-amarillo.webp") center / 100% 100% no-repeat;
+  border: 0;
+  transform: rotate(-1.2deg);
+  transition: color var(--transition), transform var(--transition);
 }
 .cuerpo .wp-block-button__link:hover {
   color: var(--bg-main);
-  background: var(--ui-success);
-  border-color: var(--ui-success);
+  background-image: url("boton-rosado.webp");
+  transform: rotate(0.6deg) scale(1.03);
 }
 .cuerpo .is-style-outline .wp-block-button__link:not(:hover) {
-  background: transparent;
+  background-image: url("boton-blanco.webp");
 }
 /* Columnas: lado a lado si hay espacio; en celular se apilan */
 .cuerpo .wp-block-columns {
@@ -1354,21 +1356,21 @@ font-weight: var(--fw-b);
   }
 }
 
-/* Filtros y paginación: también como parches (papel; el activo en verde ácido) */
+/* Filtros: cintas como los botones (blanca; rosada al pasar el cursor; la activa amarilla).
+   Paginación: parches de papel */
 .filtros {
   gap: var(--xs);
 }
 .filtros button,
 .filtros a {
-  padding: 4px calc(var(--sm) * 1.1);
+  padding: 5px calc(var(--sm) * 1.3);
   font-weight: var(--fw-sb);
   color: var(--bg-main);
-  background-color: var(--papel);
-  background-image: var(--papel-textura);
+  background: url("boton-blanco.webp") center / 100% 100% no-repeat;
   border: 0;
   border-radius: 0;
-  clip-path: var(--parche-borde);
   transform: rotate(-1deg);
+  transition: color var(--transition), transform var(--transition);
 }
 .filtros button:nth-child(even),
 .filtros a:nth-child(even) {
@@ -1377,12 +1379,21 @@ font-weight: var(--fw-b);
 .filtros button:hover,
 .filtros a:hover {
   color: var(--bg-main);
-  background-color: var(--ui-highlight);
+  background-image: url("boton-rosado.webp");
+  transform: rotate(0.6deg) scale(1.03);
 }
 .filtros .is-active,
-.filtros .active {
+.filtros .active,
+.filtros .is-active:hover,
+.filtros .active:hover {
   color: var(--bg-main);
-  background-color: var(--ui-success);
+  background-image: url("boton-amarillo.webp");
+}
+/* Teclado: el foco se ve sobre la cinta */
+.filtros button:focus-visible,
+.filtros a:focus-visible {
+  outline: 2px solid var(--ui-info);
+  outline-offset: 3px;
 }
 .pagination {
   gap: var(--xs);
