@@ -1301,13 +1301,12 @@ font-weight: var(--fw-b);
   right: 16px;
   width: 84px;
   height: 26px;
-  background-color: var(--ui-success);
-  background-image: var(--papel-textura);
-  clip-path: var(--parche-borde);
+  background: url("boton-amarillo.webp") center / 100% 100% no-repeat;
   transform: rotate(6deg);
 }
-.perfil:nth-child(even)::after {
-  background-color: var(--ui-highlight);
+/* La cinta toma el color del número de la tarjeta (02 rosado) */
+.perfil:has(.perfil-num-pink)::after {
+  background-image: url("boton-rosado.webp");
   transform: rotate(-5deg);
 }
 .perfil-monto {
@@ -1403,21 +1402,30 @@ font-weight: var(--fw-b);
 .pagination {
   gap: var(--xs);
 }
+/* Paginación: cintas como los filtros (blanca; rosada al pasar el cursor; la página actual amarilla) */
 .pagination .page-link {
   font-weight: var(--fw-sb);
   color: var(--bg-main);
-  background-color: var(--papel);
-  background-image: var(--papel-textura);
+  background: url("boton-blanco.webp") center / 100% 100% no-repeat;
   border: 0;
-  clip-path: var(--parche-borde);
+  border-radius: 0;
+  transform: rotate(-1deg);
+  transition: color var(--transition), transform var(--transition);
+}
+.pagination .page-item:nth-child(even) .page-link {
+  transform: rotate(1deg);
 }
 .pagination .page-link:hover {
   color: var(--bg-main);
-  background-color: var(--ui-highlight);
+  background-color: transparent;
+  background-image: url("boton-rosado.webp");
+  transform: rotate(0.6deg) scale(1.03);
 }
-.pagination .active .page-link {
+.pagination .active .page-link,
+.pagination .active .page-link:hover {
   color: var(--bg-main);
-  background-color: var(--ui-success);
+  background-color: transparent;
+  background-image: url("boton-amarillo.webp");
 }
 .pagination .disabled .page-link {
   opacity: 0.4;
