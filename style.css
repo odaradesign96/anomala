@@ -1126,6 +1126,12 @@ font-weight: var(--fw-b);
   color: var(--bg-main);
   background: url("fondo-suscripcion.webp") center / 100% 100% no-repeat;
 }
+/* Celular: la cinta llena la franja sin deformarse */
+@media (max-width: 991.98px) {
+  .huincha {
+    background-size: cover;
+  }
+}
 .huincha-texto {
   flex: 1 1 520px;
   max-width: 980px;
