@@ -1123,7 +1123,8 @@ font-weight: var(--fw-b);
 /* Huincha de suscripción: franja a todo el ancho bajo el banner */
 .huincha {
   padding: var(--lg) 0;
-  background: url("fondo-suscripcion.webp") center / 100% 100% no-repeat;
+  background: url("fondo-suscripcion.webp") center;
+ background-size: cover;
 }
 /* Celular: la cinta llena la franja sin deformarse */
 @media (max-width: 991.98px) {
