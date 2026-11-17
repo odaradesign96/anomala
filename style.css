@@ -1143,6 +1143,7 @@ font-weight: var(--fw-b);
   font-size: clamp(18px, 1.7vw, 26px);
   line-height: 1.2;
   font-weight: 700;
+  color: var(--bg-main);
 }
 
 /* Tarjetas de nota (Recientes y secciones): imagen, parches de formato y tema, título, autor y minutos de lectura */
