@@ -1450,7 +1450,7 @@ font-weight: var(--fw-b);
 .titulo-cinta {
   display: inline-block;
   margin: 0;
-  padding: 0.9em 0.9em 0.42em 2.5em;
+ padding: 0.9em 1.1em 0.42em 2.1em;
   line-height: 1.1;
   white-space: nowrap;
    color: var(--bg-main);
