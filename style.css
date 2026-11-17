@@ -1124,8 +1124,7 @@ font-weight: var(--fw-b);
 .huincha {
   padding: var(--lg) 0;
   color: var(--bg-main);
-  background-color: var(--ui-success);
-  background-image: var(--papel-textura);
+  background: url("fondo-suscripcion.webp") center / 100% 100% no-repeat;
 }
 .huincha-texto {
   flex: 1 1 520px;
