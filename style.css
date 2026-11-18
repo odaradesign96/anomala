@@ -525,11 +525,7 @@ font-weight: var(--fw-b);
 /* Sección rasgada: bloque violeta con bordes de papel roto arriba y abajo */
 .s-rasgada {
   padding: var(--xl);
-  background: var(--brand);
-  clip-path: polygon(
-    0 3%, 4% 0, 9% 2.5%, 15% 0.5%, 22% 3%, 30% 0, 38% 2%, 46% 0.5%, 55% 3%, 63% 0, 71% 2.5%, 80% 0.5%, 88% 3%, 95% 0, 100% 2%,
-    100% 97%, 96% 100%, 89% 97.5%, 82% 99.5%, 74% 97%, 66% 100%, 58% 98%, 50% 99.5%, 41% 97%, 33% 100%, 25% 97.5%, 17% 99.5%, 9% 97%, 3% 100%, 0 98%
-  );
+  background: url("fondo-boletin.webp") center / 100% 100% no-repeat;
 }
 @media (max-width: 767.98px) {
   .s-rasgada {
