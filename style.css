@@ -1266,10 +1266,6 @@ font-weight: var(--fw-b);
   color: var(--bg-main);
   background: url("fondo-perfil-papel.webp") right top / cover;
 }
-/* La imagen ya trae su cinta verde: se oculta la cinta decorativa del CSS */
-.perfil-papel::after {
-  display: none;
-}
 .perfil-papel .etiqueta {
   --d: var(--bg-main);
 }
