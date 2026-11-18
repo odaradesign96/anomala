@@ -527,6 +527,11 @@ font-weight: var(--fw-b);
   padding: var(--xl);
   background: url("fondo-boletin.webp") center / 100% 100% no-repeat;
 }
+/* Botón «Suscribirme gratis» del boletín: cinta rosada con el borde rasgado blanco */
+.s-rasgada .btn-dark {
+  background-image: url("boton-rosado2.webp");
+  padding-right: calc(var(--sm) * 1.2 + 0.7em);
+}
 @media (max-width: 767.98px) {
   .s-rasgada {
     padding: var(--xl) var(--md);
