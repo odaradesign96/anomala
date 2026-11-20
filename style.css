@@ -1153,7 +1153,7 @@ font-weight: var(--fw-b);
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: var(--xs);
+  gap: var(--md);
   height: 100%;
 }
 .nota-img {
