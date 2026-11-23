@@ -1234,15 +1234,11 @@ font-weight: var(--fw-b);
 }
 
 /* Footer: logo y bajada alineados a la misma línea izquierda */
-.footer-marca .brand-logo {
-  width: min(100%, 300px);
-  margin: 0;
-}
-.footer-marca .lema-img {
+.footer-marca .footer-logo {
   display: block;
-  width: 58%;
+  width: min(100%, 300px);
   height: auto;
-  margin: var(--sm) 0;
+  margin: 0 0 var(--sm);
 }
 
 /* Página de suscripciones: perfiles como tarjetas de papel y de tinta, con cinta rasgada en la esquina */
