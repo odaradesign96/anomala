@@ -1183,8 +1183,8 @@ font-weight: var(--fw-b);
 /* Etiquetas sobre la foto: cintas amarilla y rosada intercaladas; blanca al pasar el cursor */
 .nota-tags a {
   position: relative;
-  padding: 3px 14px;
-  font-size: var(--smallest);
+  padding: 4px 16px;
+  font-size: 14px;
   font-weight: var(--fw-b);
   color: var(--bg-main);
   background: url("boton-amarillo.webp") center / 100% 100% no-repeat;
